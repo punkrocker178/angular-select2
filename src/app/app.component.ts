@@ -10,6 +10,7 @@ import { delay } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
 
+  title = 'smpl-select2 demo';
   simpleDataSource: Select2DataSource = {};
   asyncDataSource: Select2DataSource = {};
 

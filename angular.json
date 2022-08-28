@@ -140,9 +140,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/smpl-select2/tsconfig.lib.json",
             "project": "projects/smpl-select2/ng-package.json"
-          }
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/smpl-select2/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/smpl-select2/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",

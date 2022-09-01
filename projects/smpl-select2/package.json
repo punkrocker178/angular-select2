@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@smplfrs/angular-select2",
-  "version": "0.0.1-beta.8",
+  "version": "0.0.1-beta.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/smplfrs/angular-select2.git"

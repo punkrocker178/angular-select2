@@ -2,8 +2,6 @@ import { OnInit, Directive, forwardRef, Input, OnChanges, Output, EventEmitter, 
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Select2Config, Select2DataSource } from './smpl-select2.model';
 import { BehaviorSubject, Subscription } from 'rxjs';
-import $ from 'jquery';
-import 'select2';
 
 @Directive({
   selector: '[smplSelect2]',
@@ -326,7 +324,6 @@ export class SmplSelect2Directive implements ControlValueAccessor, OnInit, OnCha
     if ($element.hasClass('select2-hidden-accessible')) {
       $element.select2('destroy');
     }
-
     $element.select2(options);
   }
 

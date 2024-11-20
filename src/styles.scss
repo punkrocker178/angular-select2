@@ -1,5 +1,12 @@
+@use '@angular/material' as mat;
 
 .select2-container--classic .select2-selection--multiple .select2-selection__rendered {
   width: 100%;
   box-sizing: border-box;
 }
+
+
+@include mat.core();
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

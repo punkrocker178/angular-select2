@@ -1,21 +1,83 @@
-<h5>Static options</h5>
-<select class="example" smplSelect2 static (select)="selectOption($event)">
-  <option value="1">Option 1</option>
-  <option value="2">Option 2</option>
-  <option value="3">Option 3</option>
-</select>
+<div [formGroup]="mainForm">
+  <mat-form-field class="example-full-width" appearance="outline" floatLabel="always">
+    <mat-label>Static options</mat-label>
+    <select matNativeControl formControlName="control1" class="example" smplSelect2 static
+      (select)="selectOption($event)">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+  </mat-form-field>
 
-<h5>Dynamic data</h5>
-<select class="example" smplSelect2 [dataSource]="simpleDataSource" valueProperty="value" displayProperty="title"
-  (select)="selectOption($event)">
-</select>
+  <mat-form-field class="example-full-width" appearance="outline" floatLabel="always">
+    <mat-label>Dynamic data</mat-label>
+    <select matNativeControl formControlName="control2" class="example" smplSelect2 [dataSource]="simpleDataSource"
+      valueProperty="value" displayProperty="title" (select)="selectOption($event)">
+    </select>
+  </mat-form-field>
 
-<h5>Async data source</h5>
-<select class="example" smplSelect2 [dataSource]="asyncDataSource" placeholder="Type something..."
-  (select)="selectOption($event)">
-</select>
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Async data source</mat-label>
+    <select matNativeControl formControlName="control3" class="example" smplSelect2 [dataSource]="asyncDataSource"
+      placeholder="Type something..." (select)="selectOption($event)">
+    </select>
+  </mat-form-field>
 
-<h5>Multiple selections</h5>
-<select class="example" [smplSelect2]="{multiple: true}" [dataSource]="simpleDataSource" valueProperty="value"
-  displayProperty="title" (select)="selectOption($event)">
-</select>
+  <mat-form-field appearance="outline" floatLabel="always">
+    <mat-label>Multiple selections</mat-label>
+    <select matNativeControl formControlName="control4" class="example" [smplSelect2]="{multiple: true}" [dataSource]="simpleDataSource"
+      valueProperty="value" displayProperty="title" (select)="selectOption($event)">
+    </select>
+  </mat-form-field>
+
+</div>
+<!-- 10 lines of lorem ipsum text -->
+<p style="width: 500px;">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corporis aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+  Lo rem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur
+  optio, similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corporis aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+  Lo rem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur
+  optio, similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde nam in consequuntur aut autem consequatur optio,
+  similique quo dignissimos corpor
+  is aliquid voluptatum necessitatibus, hic deleniti animi at fugit consectetur.
+</p>

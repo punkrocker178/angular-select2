@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Select2DataSource } from 'smpl-select2';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { FormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'smpl-root',
@@ -13,8 +14,16 @@ export class AppComponent implements OnInit {
   title = 'smpl-select2 demo';
   simpleDataSource: Select2DataSource = {};
   asyncDataSource: Select2DataSource = {};
+  mainForm: UntypedFormGroup;
 
   ngOnInit(): void {
+    this.mainForm = new UntypedFormGroup({
+      control1: new FormControl(null),
+      control2: new FormControl(null),
+      control3: new FormControl(null),
+      control4: new FormControl(null)
+    });
+
     setTimeout(() => {
       this.simpleDataSource = {
         data: [
@@ -24,7 +33,7 @@ export class AppComponent implements OnInit {
           { value: 4, title: 'Option 4' }
         ]
       };
-    }, 2000);
+    }, 3000);
 
     this.asyncDataSource = {
       ajaxFn: (searchText) => {
@@ -43,7 +52,8 @@ export class AppComponent implements OnInit {
   }
 
   public selectOption(option: any): void {
-    alert(JSON.stringify(option));
+    // alert(JSON.stringify(option));
+    console.log(option);
   }
 
 }

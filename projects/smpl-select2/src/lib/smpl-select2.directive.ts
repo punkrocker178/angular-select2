@@ -123,6 +123,11 @@ export class SmplSelect2Directive implements ControlValueAccessor, OnInit, OnCha
   }
 
   setDisabledState(isDisabled: boolean): void {
+    // override isDisabled false when data is not set
+    if (!this.dataSource?.data?.length && !this.dataSource?.ajaxFn) {
+      isDisabled = true;
+    }
+
     this._disabled = isDisabled;
 
     const $element = $(this._el.nativeElement);
